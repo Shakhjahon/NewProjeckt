@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gren">#2F2E41</color>
+    <color name="grayn">#B86060</color>
+    <color name="transpert">#FFFFFFFF</color>
+    <color name="onBoarding_backraund">#3F3D56</color>
+    <color name="onBoarding_btn_backround">#fbb395</color>
+    <color name="onBoarding_backround">#F5C9B7</color>
+    <color name="gray">#888</color>
+    <color name="gren_onBoording">#5AA72B</color>
+</resources>
