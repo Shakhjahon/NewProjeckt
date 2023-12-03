@@ -18,5 +18,34 @@
         android:id="@+id/mainScreenFragment"
         android:name="com.example.newprojeckt.presentation.main_screen.MainScreenFragment"
         android:label="fragment_main_screen"
-        tools:layout="@layout/fragment_main_screen" />
+        tools:layout="@layout/fragment_main_screen" >
+
+        <action
+            android:id="@+id/action_mainScreenFragment_to_foodDeteilsFragment"
+            app:destination="@id/foodDeteilsFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_mainFoodBasketFragment"
+            app:destination="@id/mainFoodBasketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDeteilsFragment"
+        android:name="com.example.newprojeckt.presentation.FoodDeteils.FoodDeteilsFragment"
+        android:label="fragment_food_deteils"
+        tools:layout="@layout/fragment_food_deteils" >
+        <action
+            android:id="@+id/action_foodDeteilsFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+        <action
+            android:id="@+id/action_foodDeteilsFragment_to_mainFoodBasketFragment"
+            app:destination="@id/mainFoodBasketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFoodBasketFragment"
+        android:name="com.example.newprojeckt.presentation.main_screen.MainFoodBasketFragment"
+        android:label="fragment_main_food_basket"
+        tools:layout="@layout/fragment_main_food_basket" >
+        <action
+            android:id="@+id/action_mainFoodBasketFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
 </navigation>

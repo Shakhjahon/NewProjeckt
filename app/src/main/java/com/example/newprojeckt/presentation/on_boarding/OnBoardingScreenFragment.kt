@@ -44,6 +44,7 @@ class OnBoardingScreenFragment : Fragment() {
     }
 
     private fun checkFirstUser() {
-        if (sharedPreferences.getIsUserFirstSign()) findNavController().navigate(R.id.action_onBoardingScreenFragment_to_mainScreenFragment)
+        if (sharedPreferences.getIsUserFirstSign())
+            findNavController().navigate(R.id.action_onBoardingScreenFragment_to_mainScreenFragment)
     }
 }

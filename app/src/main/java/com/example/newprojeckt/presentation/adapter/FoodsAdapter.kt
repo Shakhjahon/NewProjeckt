@@ -1,6 +1,6 @@
 package com.example.newprojeckt.presentation.adapter
 
-import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,25 +9,36 @@ import com.example.newprojeckt.R
 import com.example.newprojeckt.data.model.FoodModel
 import com.example.newprojeckt.databinding.FooditemBinding
 
-class FoodsAdapter : RecyclerView.Adapter<FoodsAdapter.FoodViewHolder>() {
+class FoodsAdapter(
+    private val listner: FoodsItemClick,
+) : RecyclerView.Adapter<FoodsAdapter.FoodViewHolder>() {
 
-   private var foodList = mutableListOf<FoodModel>()
+    private var foodList = mutableListOf<FoodModel>()
 
-    @SuppressLint("NotifyDataSetChanged")
     fun updateFoodList(movieList: List<FoodModel>) {
-        foodList.clear()
-        foodList.addAll(movieList)
+        this.foodList.clear()
+        this.foodList.addAll(movieList)
+        Log.d("FFF", "updateFoodList $movieList")
         notifyDataSetChanged()
     }
 
     inner class FoodViewHolder(private val binding: FooditemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(foodModel: FoodModel) {
-            foodList.indexOf(foodModel)
-            binding.CupCaces.text = foodModel.foodName
-            binding.find.text = foodModel.fooddescription
-            binding.price.text = foodModel.foodPrice.toString()
-            Glide.with(binding.root).load(foodModel.foodImg).into(binding.imgIv)
+            binding.apply {
+                foodList.indexOf(foodModel)
+                CupCaces.text = foodModel.foodName
+                find.text = foodModel.fooddescription
+                price.text = "${foodModel.foodPrice}$"
+                itemCard.setOnClickListener {
+                    listner.onFoodItemClick(foodModel)
+                }
+                Glide.with(binding.root).load(foodModel.foodImg).into(binding.imgIv)
+
+                deleteCard.setOnClickListener {
+                    listner.deleteAtFoodIndex(foodList.indexOf(foodModel))
+                }
+            }
         }
     }
 
@@ -50,5 +61,5 @@ class FoodsAdapter : RecyclerView.Adapter<FoodsAdapter.FoodViewHolder>() {
         holder.bind(foodList[position])
 
     }
+
 }
- 

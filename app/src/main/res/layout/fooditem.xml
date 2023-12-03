@@ -5,6 +5,7 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/itemCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
@@ -54,19 +55,11 @@
                     android:textColor="@color/gren_onBoording"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/dText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hint"
-                    android:layout_marginTop="3dp"
-                    android:textColor="@color/gren_onBoording"
-                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imgIv"
+                android:id="@+id/imgIv"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_gravity="end"
@@ -74,11 +67,12 @@
             android:src="@drawable/cakes" />
 
         <ImageView
+            android:id="@+id/deleteCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="16dp"
-            android:src="@drawable/vector__1_" />
+            android:src="@drawable/delete" />
 
     </androidx.cardview.widget.CardView>
 

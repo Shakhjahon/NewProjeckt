@@ -4,7 +4,7 @@
     <string name="omBording_description">Order your favorite desert \n Here!</string>
     <string name="omBording_get_start">Get Started</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="flavoured_cupcakes_with_special_icing">Flavoured cupcakes with \n special icing</string>
+    <string name="flavoured_cupcakes_with_special_icing">Flavoured cupcakes with special icing</string>
     <string name="cup_cake">Cup Cake</string>
     <string name="_5">$5</string>
     <string name="all">All</string>
@@ -12,4 +12,9 @@
     <string name="cakes">Cakes</string>
     <string name="candey">Candey</string>
     <string name="hint">$</string>
+    <string name="donuts">Donuts</string>
+    <string name="about_this_product">About this product</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="five">$5</string>
+    <string name="basket">basket</string>
 </resources>
