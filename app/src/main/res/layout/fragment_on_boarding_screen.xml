@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gren"
-    tools:context=".presentation.presentation.OnBoardingScreenFragment">
+    tools:context=".presentation.on_boarding.OnBoardingScreenFragment">
 
 
     <androidx.cardview.widget.CardView

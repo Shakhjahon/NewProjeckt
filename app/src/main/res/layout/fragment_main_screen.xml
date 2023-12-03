@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/onBoarding_btn_backround"
-    tools:context=".presentation.presentation.MainScreenFragment">
+    tools:context=".presentation.main_screen.MainScreenFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onBoardingScreenFragment"
-        android:name="com.example.newprojeckt.presentation.presentation.OnBoardingScreenFragment"
+        android:name="com.example.newprojeckt.presentation.on_boarding.OnBoardingScreenFragment"
         android:label="fragment_on_boarding_screen"
         tools:layout="@layout/fragment_on_boarding_screen">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainScreenFragment"
-        android:name="com.example.newprojeckt.presentation.presentation.MainScreenFragment"
+        android:name="com.example.newprojeckt.presentation.main_screen.MainScreenFragment"
         android:label="fragment_main_screen"
         tools:layout="@layout/fragment_main_screen" />
 </navigation>

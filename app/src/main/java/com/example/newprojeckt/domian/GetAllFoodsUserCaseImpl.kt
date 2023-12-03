@@ -1,13 +1,13 @@
 package com.example.newprojeckt.domian
 
-import com.example.newprojeckt.data.prefences.model.FoodModel
-import com.example.newprojeckt.data.prefences.repositore.GetAllFoodsRipositoreImpl
+import com.example.newprojeckt.data.model.FoodModel
+import com.example.newprojeckt.data.repository.GetAllFoodsRepositoryImpl
 
-class getAllFoodsUserCaseImpl : GetAllFoodsUserCase {
+class GetAllFoodsUserCaseImpl : GetAllFoodsUserCase {
 
-    private val foodsRipository = GetAllFoodsRipositoreImpl()
+    private val foodsRepository = GetAllFoodsRepositoryImpl()
 
-    override fun getAllFoods(): List<FoodModel> {
-        return foodsRipository.getAllFoods()
+    override suspend fun getAllFoods(): List<FoodModel> {
+        return foodsRepository.getAllFoods()
     }
 }
