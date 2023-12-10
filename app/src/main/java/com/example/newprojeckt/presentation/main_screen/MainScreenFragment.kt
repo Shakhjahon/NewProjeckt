@@ -13,8 +13,10 @@ import com.example.newprojeckt.R
 import com.example.newprojeckt.data.fake_data.FoodSharedPref
 import com.example.newprojeckt.data.model.FoodModel
 import com.example.newprojeckt.databinding.FragmentMainScreenBinding
+import com.example.newprojeckt.presentation.adapter.FoodAdapter
 import com.example.newprojeckt.presentation.adapter.FoodsAdapter
 import com.example.newprojeckt.presentation.adapter.FoodsItemClick
+import com.google.android.material.color.MaterialColors
 
 class MainScreenFragment : Fragment(), FoodsItemClick {
 
@@ -26,8 +28,8 @@ class MainScreenFragment : Fragment(), FoodsItemClick {
     private var foodList: List<FoodModel> = emptyList()
 
 
-    private val foodAdapter: FoodsAdapter by lazy {
-        FoodsAdapter(this)
+    private val foodAdapter: FoodAdapter by lazy {
+        FoodAdapter(this)
     }
 
     override fun onCreateView(
@@ -66,7 +68,7 @@ class MainScreenFragment : Fragment(), FoodsItemClick {
     }
 
     private fun setUpViews() = binding.apply {
-        recycliview.adapter = foodAdapter
+        receyclerview.adapter = foodAdapter
     }
 
     private fun fitherFood(title: String) {
@@ -94,7 +96,8 @@ class MainScreenFragment : Fragment(), FoodsItemClick {
 
     override fun onFoodItemClick(foodModel: FoodModel) {
         findNavController().navigate(
-            R.id.action_mainScreenFragment_to_foodDeteilsFragment, bundleOf(FOOD_KEY to foodModel)
+            R.id.action_mainScreenFragment_to_foodDeteilsFragment,
+            bundleOf(FOOD_KEY to foodModel)
         )
     }
 

@@ -11,5 +11,7 @@
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
 
-    <style name="Theme.NewProjeckt" parent="Base.Theme.NewProjeckt" />
+    <style name="Theme.NewProjeckt" parent="Base.Theme.NewProjeckt" >
+
+    </style>
 </resources>
